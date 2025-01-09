@@ -4,7 +4,7 @@
   height: 100vh;
   background-color: black;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0)),
-    url("./images/DARUL-ISHLAH.jpeg") center center no-repeat;
+    url("../images/DARUL-ISHLAH.jpeg") center center no-repeat;
   background-size: cover;
   background-position: center;
   justify-content: center;
@@ -30,6 +30,6 @@
 @media (max-width: 576px) {
   .beranda {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0)),
-      url("./images/bg-darulishlah.jpeg") center center no-repeat;
+      url("../images/bg-darulishlah.jpeg") center center no-repeat;
   }
 }
