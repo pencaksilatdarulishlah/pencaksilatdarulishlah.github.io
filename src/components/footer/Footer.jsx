@@ -8,7 +8,7 @@ const Footer = () => {
           <p>Official Social Media Account</p>
           <div className="list-sosmed">
             <div className="box-icon-sosmed">
-              <a href="">
+              <a href="https://www.instagram.com/pencaksilat_darulishlah/">
                 <img src="../icon/instagram.webp" alt="instagram" />
               </a>
             </div>
