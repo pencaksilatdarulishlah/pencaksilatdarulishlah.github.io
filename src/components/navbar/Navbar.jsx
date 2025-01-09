@@ -54,7 +54,6 @@ const Navbar = ({ scrollTo }) => {
           <span></span>
           <span></span>
         </button>
-        {/* {open && (<div className="overlay" onClick={() => toggleSidebar()}></div>)} */}
       </header>
     </>
   );

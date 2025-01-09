@@ -1,7 +1,8 @@
-body {
+body,
+html {
   background-color: #111 !important;
   color: #ddd !important;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 /* 
 html {
