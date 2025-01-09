@@ -127,7 +127,7 @@ const TentangKami = () => {
           data-aos-offset="300"
           data-aos-easing="ease-in-sine">
           <img className='img img-fluid rounded image-pendukung'
-            src="./images/LOGO.png"
+            src="./people/Ka Imam Alm.png"
             alt="" />
         </div>
         <div className="deskripsi"
