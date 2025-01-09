@@ -1,0 +1,16 @@
+body {
+  background-color: #111 !important;
+  color: #ddd !important;
+  overflow-x: hidden;
+}
+/* 
+html {
+  scroll-behavior: smooth;
+}
+
+#beranda,
+#tentangKami,
+#kegiatan,
+#kontak {
+  scroll-margin-top: 75px;
+} */

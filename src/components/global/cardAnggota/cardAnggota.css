@@ -1,0 +1,29 @@
+.anggota-tim {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 300px;
+  /* background-color: aqua; */
+}
+
+.nama-anggota {
+  font-weight: 900;
+  color: #fff;
+}
+
+.nomor-anggota {
+  font-size: 14px;
+}
+
+.jabatan {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.box-image-anggota {
+  width: 100%;
+  /* background-color: antiquewhite; */
+}

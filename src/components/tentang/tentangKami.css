@@ -1,0 +1,114 @@
+.tentang-kami {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 50px; */
+  width: 100%;
+  /* padding: 20px; */
+  /* background-color: aqua; */
+}
+
+section {
+  padding: 40px 50px;
+  background-color: blue;
+}
+
+section:nth-child(odd) {
+  background-color: #181717;
+}
+
+section:nth-child(even) {
+  background-color: #111;
+}
+
+.darulishlah,
+.struktur {
+  display: flex;
+  flex-direction: column;
+}
+
+.judul {
+  color: #fff;
+  align-self: center;
+  /* color: #fff; */
+  margin-bottom: 20px;
+}
+
+.sub-judul {
+  color: #fff;
+  align-self: center;
+}
+
+.sejarah,
+.lambang,
+.visi,
+.misi,
+.guru-besar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* justify-content: space-between; */
+}
+
+.box-image {
+  display: flex;
+  flex: 1;
+  place-content: center;
+  align-self: center;
+  /* width: 50%; */
+}
+
+.box-image-lambang {
+  height: 500px;
+}
+
+.image-pendukung {
+  object-fit: contain;
+}
+
+.deskripsi strong {
+  font-weight: 900;
+}
+
+.deskripsi-lambang ol p {
+  font-style: italic;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.deskripsi {
+  flex: 1;
+  width: 50%;
+  align-self: center;
+  text-align: justify;
+}
+
+.list-anggota-tim {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .sejarah,
+  .lambang,
+  .visi,
+  .misi,
+  .guru-besar {
+    flex-direction: column;
+  }
+
+  .box-image {
+    width: 200px;
+  }
+
+  .deskripsi {
+    width: 100%;
+  }
+
+  .order-change {
+    order: -1;
+  }
+}

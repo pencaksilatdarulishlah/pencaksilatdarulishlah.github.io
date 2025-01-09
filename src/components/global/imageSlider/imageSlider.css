@@ -1,0 +1,10 @@
+.container-item {
+  min-width: inherit;
+  max-width: 450px;
+}
+
+.deskripsi-item {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+}

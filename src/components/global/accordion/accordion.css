@@ -1,0 +1,11 @@
+.accordion-container {
+  width: 90vw;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.body-accordion, .button-accordion {
+  background-color: #333;
+  color: #fff;
+  text-align: start;
+}
