@@ -91,7 +91,7 @@ const TentangKami = () => {
           <h3 data-aos="fade-down">Tim Penasihat Senior</h3>
         </div>
         <div className="list-anggota-tim">
-          {<CardAnggota image="./images/LOGO.png" nama="SARIMAN" nomorAnggota="PSDI-0000-000" jabatan="KETUA" />}
+          {<CardAnggota image="./people/SARIMAN.png" nama="SARIMAN" nomorAnggota="PSDI-0000-000" jabatan="KETUA" />}
           {<CardAnggota image="./images/LOGO.png" nama="......." nomorAnggota="PSDI-0000-000" jabatan="WAKIL" />}
         </div>
       </section>
@@ -100,7 +100,7 @@ const TentangKami = () => {
           <h3 data-aos="fade-down">Tim Kepemimpinan Inti</h3>
         </div>
         <div className="list-anggota-tim">
-          {<CardAnggota image="./images/LOGO.png" nama="RAHMAT RAMADHAN" nomorAnggota="PSDI-0000-000" jabatan="KETUA" />}
+          {<CardAnggota image="./people/RAHMAT.png" nama="RAHMAT RAMADHAN" nomorAnggota="PSDI-0000-000" jabatan="KETUA" />}
           {<CardAnggota image="./images/LOGO.png" nama="......." nomorAnggota="PSDI-0000-000" jabatan="WAKIL" />}
           {<CardAnggota image="./images/LOGO.png" nama="......." nomorAnggota="PSDI-0000-000" jabatan="SEKRETARIS" />}
           {<CardAnggota image="./images/LOGO.png" nama="......." nomorAnggota="PSDI-0000-000" jabatan="BENDAHARA" />}
@@ -116,7 +116,7 @@ const TentangKami = () => {
           {<CardAnggota image="./images/LOGO.png" nama="......." nomorAnggota="PSDI-0000-000" jabatan="SEKRETARIS" />}
           {<CardAnggota image="./images/LOGO.png" nama="......." nomorAnggota="PSDI-0000-000" jabatan="BENDAHARA" />}
           {<CardAnggota image="./images/LOGO.png" nama="......." nomorAnggota="PSDI-0000-000" jabatan="PELATIHAN DAN TEKNIK" />}
-          {<CardAnggota image="./images/LOGO.png" nama="WILDAN SYAHRUL NURCHOLIS" nomorAnggota="PSDI-0000-000" jabatan="KEANGGOTAAN" />}
+          {<CardAnggota image="./people/WILDAN.png" nama="WILDAN SYAHRUL NURCHOLIS" nomorAnggota="PSDI-0000-000" jabatan="KEANGGOTAAN" />}
           {<CardAnggota image="./images/LOGO.png" nama="TAMIR SEPTIAN" nomorAnggota="PSDI-0000-000" jabatan="HUMAS DAN PUBLIKASI" />}
           {<CardAnggota image="./images/LOGO.png" nama="......." nomorAnggota="PSDI-0000-000" jabatan="SARANA DAN PRASARANA" />}
         </div>
