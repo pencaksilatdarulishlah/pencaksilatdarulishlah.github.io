@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Beranda from "../components/beranda/Beranda";
 import Footer from "../components/footer/Footer";
 import Kegiatan from "../components/kegiatan/Kegiatan";
@@ -6,36 +6,82 @@ import Navbar from "../components/navbar/navbar";
 import TentangKami from "../components/tentang/TentangKami";
 
 const Home = () => {
-  const kegiatanReff = useRef(null); // Buat referensi untuk elemen Kegiatan
-  const berandaReff = useRef(null); // Buat referensi untuk elemen Kegiatan
-  const tentangKamiReff = useRef(null); // Buat referensi untuk elemen Kegiatan
-  const footerReff = useRef(null); // Buat referensi untuk elemen Kegiatan
+  const navbarHeight = 75;
+  const sections = useMemo(() => [
+    { id: "beranda", component: <Beranda /> },
+    { id: "tentangKami", component: <TentangKami /> },
+    { id: "kegiatan", component: <Kegiatan /> },
+    { id: "kontak", component: <Footer /> },
+  ], [])
+
+  const [active, setActive] = useState("home")
+  const [scrollY, setScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    };
+  }, []);
+
+  useEffect(() => {
+    const activeSection = sections.find((section) => {
+      const element = document.getElementById(section.id);
+      if (element) {
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
+        const elementBottom = elementTop + element.offsetHeight;
+
+        // Periksa apakah elemen berada dalam jangkauan scroll
+        return scrollY + 75 >= elementTop && scrollY + 75 <= elementBottom;
+      }
+      return false;
+    });
+
+    if (activeSection) {
+      setActive(activeSection.id);
+    }
+  }, [scrollY, active, sections]);
+
+  const handleActive = (e) => {
+    setActive(e);
+  };
 
   const scrollTo = (id) => {
-    const element = document.getElementById(id)
-    const navbarHeight = 75; // Sesuaikan dengan tinggi navbar Anda
-    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const element = document.getElementById(id);
+    const elementPosition =
+      element.getBoundingClientRect().top + window.scrollY;
+    // console.log(elementPosition)
 
     window.scrollTo({
       top: elementPosition - navbarHeight,
       behavior: "smooth",
     });
-    // if (section === "beranda") berandaReff.current.scrollIntoView({ behavior: "smooth" });
-    // if (section === "kegiatan") kegiatanReff.current.scrollIntoView({ behavior: "smooth" });
-    // if (section === "tentangKami") tentangKamiReff.current.scrollIntoView({ behavior: "smooth" });
-    // if (section === "kontak") footerReff.current.scrollIntoView({ behavior: "smooth" });
-    console.log(id)
+    console.log(id);
   };
 
   return (
     <>
-      <Navbar scrollTo={scrollTo} />
-      <div id="beranda" ref={berandaReff}><Beranda /></div>
-      <div id="tentangKami" ref={tentangKamiReff}><TentangKami /></div>
-      <div id="kegiatan" ref={kegiatanReff}><Kegiatan /></div>
-      <div id="kontak" ref={footerReff}><Footer /></div>
+      <Navbar scrollTo={scrollTo} active={active} handleActive={handleActive} />
+      {sections.map((section) => (
+        <div key={section.id} id={section.id}> {section.component} </div>
+      ))}
+      {/* <div id="beranda">
+        <Beranda />
+      </div>
+      <div id="tentangKami">
+        <TentangKami />
+      </div>
+      <div id="kegiatan">
+        <Kegiatan />
+      </div>
+      <div id="kontak">
+        <Footer />
+      </div> */}
     </>
   );
-}
+};
 
 export default Home;

@@ -1,9 +1,9 @@
-import './card.css'
-import PropTypes from 'prop-types';
+import "./card.css";
+import PropTypes from "prop-types";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ImageSlider from '../imageSlider/ImageSlider'
+import ImageSlider from "../imageSlider/ImageSlider";
 
 const Card = ({ dataAos, images, idImages, title, deskripsi, link }) => {
   useEffect(() => {
@@ -20,16 +20,16 @@ const Card = ({ dataAos, images, idImages, title, deskripsi, link }) => {
       </div>
       <div className="box-deskripsi-card">
         <h5 className="card-title">{title}</h5>
-        <p className="card-text text">
-          {deskripsi}
-        </p>
+        <p className="card-text text">{deskripsi}</p>
       </div>
       <div className="card-body body-card">
-        <a href={link} className="btn btn-outline-success">Lihat Selengkapnya</a>
+        <a href={link} className="btn btn-outline-success">
+          Lihat Selengkapnya
+        </a>
       </div>
     </div>
-  )
-}
+  );
+};
 Card.propTypes = {
   dataAos: PropTypes.string,
   images: PropTypes.arrayOf(PropTypes.string),
@@ -39,4 +39,4 @@ Card.propTypes = {
   link: PropTypes.string,
 };
 
-export default Card
+export default Card;

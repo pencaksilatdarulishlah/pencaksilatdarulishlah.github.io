@@ -1,4 +1,4 @@
-import './footer.css'
+import "./footer.css";
 
 const Footer = () => {
   return (
@@ -28,7 +28,7 @@ const Footer = () => {
         <p>© 2024 Darul Ishlah</p>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -42,6 +42,7 @@
 @media (max-width: 768px) {
   .card-kegiatan {
     width: 450px;
+    height: max-content;
   }
 }
 

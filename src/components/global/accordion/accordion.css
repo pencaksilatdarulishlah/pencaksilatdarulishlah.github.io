@@ -4,7 +4,8 @@
   opacity: 0.7;
 }
 
-.body-accordion, .button-accordion {
+.body-accordion,
+.button-accordion {
   background-color: #333;
   color: #fff;
   text-align: start;

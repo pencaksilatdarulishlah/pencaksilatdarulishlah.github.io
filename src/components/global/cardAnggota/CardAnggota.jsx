@@ -1,5 +1,5 @@
-import './cardAnggota.css'
-import PropTypes from 'prop-types';
+import "./cardAnggota.css";
+import PropTypes from "prop-types";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -20,8 +20,8 @@ const CardAnggota = ({ image, nama, nomorAnggota, jabatan }) => {
       <p className="nomor-anggota">{nomorAnggota}</p>
       <p className="jabatan">{jabatan}</p>
     </div>
-  )
-}
+  );
+};
 
 CardAnggota.propTypes = {
   image: PropTypes.string.isRequired,
@@ -30,4 +30,4 @@ CardAnggota.propTypes = {
   jabatan: PropTypes.string.isRequired,
 };
 
-export default CardAnggota
+export default CardAnggota;
